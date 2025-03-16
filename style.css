@@ -1,0 +1,334 @@
+body {
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    background-color: black;
+    color: white;
+    overflow: hidden;
+}
+
+.main {
+    display: flex;
+    height: 100vh;
+    padding: 0.5rem;
+}
+
+.sidebar {
+    /* background-color: red; */
+    /* background-color: #121212; */
+    /* background-color: black; */
+    background-color: black;
+    width: 340px;
+    border-radius: 1rem;
+    /* Understanding rem in CSS:
+  - 1rem = root(.main) font size (default: 16px in most browsers).
+  - rem is always relative to <html>, unlike em (which depends on parent).
+  - Ensures consistent scaling and better accessibility.*/
+    margin-right: 0.5rem;
+
+}
+
+.main-content {
+    /* background-color: blue; */
+    background-color: #121212;
+    flex: 1;
+    /*jitna bhi remaining space hai wo ye occupy krega */
+    border-radius: 1rem;
+    overflow: auto; /*scroll bar jab zaroorat hoga tab hi dikhai dega (sirf main content k andar milega)*/
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+.music-player {
+    /* background-color: yellow; */
+    background-color: black;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 72px;
+
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.nav{
+    height: 100px;
+    background-color: #121212;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* main-axis ie column (height) mai center */
+    padding-top: 0.5rem; /* 8px */
+    padding-bottom: 0.5rem; /* 8px */
+    padding-left: 0.75rem; /* 12px */
+    padding-right: 0.75rem; /* 12px */
+}
+
+.nav-option{
+    line-height: 2.5rem; /* around 40px */
+    opacity: 0.7;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    padding-top:0.5rem ;
+    padding-bottom:0.5rem;
+}
+
+.nav-option i{
+    font-size: 1.25rem; /* 20px */
+}
+.nav-option a{
+    font-size: 1rem; /* 16px */
+    margin-left: 1rem;
+    
+}
+
+.nav-option:hover{
+    opacity: 1;
+}
+
+.library{
+    background-color: #121212;
+    border-radius: 1rem;
+    height: 100%;
+    margin-top: 0.5rem; /*8px*/
+    padding-top: 0.5rem; /* 8px */
+    padding-bottom: 0.5rem; /* 8px */
+    padding-left: 0.75rem; /* 12px */
+    padding-right: 0.75rem; /* 12px */
+
+}
+
+.options{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.lib-option img{
+height: 1.25rem; /*same as font size of icons */
+width: 1.25rem;
+}
+
+.icons{
+    font-size: 1.25rem;
+    display: flex;
+}
+
+.icons i{
+    opacity: 0.7;
+    margin-right: 1rem;
+}
+
+.icons i:hover{
+    opacity: 1;
+}
+.box{
+    border-radius: 0.75rem;
+    background-color: #232323;
+    height: 8rem;
+    margin-top:0.75rem;
+    margin-bottom:1.75rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+}
+.box-p1{
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+.box-p2{
+    font-size: 0.8rem;
+    opacity: 0.9;
+}
+.badge{
+    
+    background-color: white;
+    border: none;
+    border-radius: 100px;
+    padding-top:0.25rem;
+    padding-bottom:0.25rem;
+    padding-left:1rem ;
+    padding-right:1rem ;
+    font-weight: 600;
+    margin-top: 0.5rem;
+    height: 2rem;
+}
+
+.nav-option{
+font-weight: 600;
+}
+
+.sticky-nav{
+    position: sticky;
+    top: 0;
+    background-color: #121212;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    z-index: 10;
+}
+.sticky-nav-icons { /* image ka size badhana h to height dedo */
+margin-left: 0.75rem;
+}
+
+.sticky-nav-options{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-item{
+    margin-right: 1rem;
+}
+.dark-badge{
+    background-color: black;
+    color: white;
+}
+
+@media (max-width : 1000px)
+{
+    .hide{
+        display: none;
+    }
+}
+.card{
+    padding: 1rem;
+    background-color:#232323;
+    width: 150px;
+    border-radius: 0.5rem;
+    margin-left: 1.5rem;
+    margin-top: 1rem;
+}
+.card-container{
+    display: flex; 
+    flex-wrap: wrap;
+}
+.card-image{
+    width: 100%;
+    border-radius: 0.5rem;
+}
+.card-title{
+    font-weight: 600;
+}
+.card-info{
+    font-size: 0.85rem;         
+    opacity: 0.8;       
+}
+.footer{
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.line{
+    width: 90%;
+    height: 50%;
+    border-top: 1px solid white;
+    opacity: 0.4;
+}
+
+.music-player{
+    display: flex;
+    justify-content: space-between;
+}
+.album{
+    width: 25%;
+    /* background-color: red; */
+}
+.player{
+    width: 50%;
+/* background-color: blue; */
+
+}
+.control{
+    width: 25%;
+    /* background-color: green; */
+}
+.player-control-icon{
+    height: 1rem;
+    margin-right: 1.75rem;
+    opacity: 0.7;
+}
+.player-control-icon:hover{
+    opacity: 1;
+}
+
+.player-controls{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:0.75rem;
+}
+.playback-bar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.progress-bar{
+    width: 70%;
+    appearance: none;
+    background-color: transparent;
+    cursor: pointer;
+
+}
+
+.progress-bar::-webkit-slider-runnable-track{
+    background-color: white;
+    border-radius: 100px;
+    height: 0.2rem;
+}
+
+.progress-bar::-webkit-slider-thumb{
+    appearance: none;
+    height: 1rem;
+    width: 1rem;
+    background-color: #1bd760;
+    border-radius: 50%;
+    margin-top: -6px;
+}
+.album-song-image{
+    width: 3rem;
+    height: 3rem;
+    margin-right: 1rem;
+    margin-left: 2rem;
+    /* padding: 1rem; */
+    border-radius: 0.5rem ;
+}
+.album{
+    display: flex;
+}
+.album-song{
+    width: 60%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.album-icon{
+    width: 40%;
+}
+
+
+.player-music{
+    line-height:1.5rem ;
+}
+.album-icon{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.music-player-album-icon{
+    font-size: 1.5rem;
+    margin-right: 1rem;
+}
+
+.n-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
